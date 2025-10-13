@@ -1,4 +1,4 @@
-# Recipes Book Web Application - Hello
+# Recipes Book Web Application
 
 ## Features and Functionality
 
