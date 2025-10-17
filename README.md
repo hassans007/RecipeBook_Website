@@ -9,7 +9,7 @@
 - Optimized for mobile devices with a responsive design, where the navigation bar collapses into a **hamburger menu**. Clicking the hamburger icon reveals the navigation links.
 ##### Currently there are two users added by default in the seeder.
 Admin Credentials
-- email: admin@gamail.com
+- email: admin@gmail.com
 - password: admin123
 
 User Credentials
