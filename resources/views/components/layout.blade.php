@@ -9,8 +9,8 @@
         @endisset
     </title>
     <link rel="icon" href="{{ asset('images/icon/main.ico') }}" type="image/x-icon"/>
-    {{-- <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css"/> --}}
-    @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css"/>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <nav class="navbar">
