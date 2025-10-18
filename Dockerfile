@@ -28,6 +28,8 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
+RUN php artisan optimize:clear
+
 # Install Node dependencies and build assets using Laravel + Vite Build
 RUN npm install && npm run build
 
