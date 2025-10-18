@@ -5,9 +5,12 @@ FROM php:8.2-apache
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
+    curl \
     libpq-dev \
     libzip-dev \
     zip \
+    nodejs \
+    npm \
     && docker-php-ext-install pdo pdo_pgsql zip
 
 # Enable Apache mod_rewrite for Laravel routing
@@ -22,13 +25,16 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Copy project files
 COPY . .
 
-# Install PHP dependencies (optimized for production)
+# Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Set appropriate permissions for Laravel storage and cache
+# Install Node dependencies and build assets using Laravel Mix
+RUN npm install && npm run prod
+
+# Set correct permissions for Laravel
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Set the Apache DocumentRoot to the public folder
+# Set Apache DocumentRoot to the Laravel public folder
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
 
