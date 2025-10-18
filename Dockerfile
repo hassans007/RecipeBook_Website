@@ -28,8 +28,8 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Install Node dependencies and build assets using Laravel Mix
-RUN npm install && npm run prod
+# Install Node dependencies and build assets using Laravel + Vite Build
+RUN npm install && npm run build
 
 # Set correct permissions for Laravel
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
