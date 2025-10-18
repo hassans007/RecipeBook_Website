@@ -31,7 +31,9 @@ RUN composer install --no-dev --optimize-autoloader
 RUN php artisan optimize:clear
 
 # Install Node dependencies and build assets using Laravel + Vite Build
-RUN npm install && npm run build
+RUN npm install
+
+RUN npm run build
 
 # Set correct permissions for Laravel
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
