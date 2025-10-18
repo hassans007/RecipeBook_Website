@@ -1,0 +1,2171 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.content {
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-content{
+    align-items: center;
+}
+
+.guestmessage a{
+    text-decoration: none;
+    color: #27ae60;
+}
+
+.guestmessage a:hover{
+    text-decoration:underline;
+}
+
+.guestmessage p{
+    font-size: xx-large;
+    margin: auto;
+    padding: 100px;
+}
+
+.home-content h2.top{
+    font-size: xx-large;
+    color: #2a4e58;
+    border-bottom: 2px solid #5caa35; 
+    padding-bottom: 10px; 
+    display: inline-block;
+    width: 100%;
+}
+
+.recipe-name {
+    margin-top: 0.5rem;
+    font-size: large;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+}
+.recipe-name:hover {
+    color: #77ce49;
+}
+
+.featured-content{
+    margin: auto;
+    cursor: pointer;
+}
+
+/* Flip card styles */
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flip-card-front {
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.flip-card-back {
+    background: #e4e4e4a3;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+}
+
+.flip-card-back a{
+    text-decoration: none;
+    color: #2c9abf;
+}
+
+.flip-card-back a:hover{
+    text-decoration: underline;
+    color: #218838;
+}
+
+.hover-text {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.flip-card-front:hover .hover-text {
+    display: block;
+}
+
+.btn {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+
+.main-img {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    margin: 20px;
+}
+
+.recipe-item {
+    flex: 1 1 calc(25% - 20px); 
+    max-width: 300px;
+    position: relative; 
+}
+
+.flip-card {
+    width: 300px; 
+    height: 300px; 
+    perspective: 1000px; 
+}
+
+.poster {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 15px; 
+}
+
+.backimg-section {
+    background: url('/Images/back.png') no-repeat center center/cover;
+    width: 100%;
+    height: 30vh;
+    color: white;
+    text-align: center;
+    position: relative;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+
+.backimg-content {
+    background-color: #00000093;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+
+.bottom-content{
+    border-top: 2px solid #5caa35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.content-heading{
+    font-size: xx-large;
+    color: #2b6777;
+}
+.bottom-content li{
+    font-size: x-large;
+}
+.bottom-content a{
+    text-decoration: none;
+    color: #000000;
+}
+.bottom-content a:hover{
+    color: #52ab98;
+}
+.bottom-content li:hover{
+    color: #22b705;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #efefd4;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 60px;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+}
+
+.fnav-box a {
+    color: #000;
+    text-decoration: none;
+}
+
+.fnav-box a:hover {
+    text-decoration: underline;
+    color: #27ae60;
+}
+.flogo{
+    margin: 40px;
+}
+.flogo a{
+    font-size: xx-large;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.flogo span {
+    color: #27ae60;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #23444b;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .logo span {
+    color: #27ae60;
+}
+
+.nav-center {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav-box a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-box a.active {
+    border-bottom: 3px solid #27ae60;
+    color: #ffffff;
+    border-radius: 0px;
+    height: 20px;
+    padding: 5px 10px;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+button.log {
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 15px;
+    height: 30px;
+    background-color: #27ae60;
+    transition: background-color 0.3s ease;
+}
+
+button.log:hover {
+    background-color: #de1919;
+}
+
+.current-user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.current-user p {
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.current-user .user-menu {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.current-user:hover .user-menu {
+    display: flex;
+}
+
+.user-menu a, 
+.user-menu button {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    background: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.user-menu a:hover, 
+.user-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+.user-menu button {
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    color: #333;
+}
+
+.success-message {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 9999;
+    background-color: #d4eddad9; 
+    color: #2a9844; 
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevent it from taking space */
+    transition: opacity 1s ease, visibility 1s ease; /* Smooth fade-in/out */
+}
+
+.success-message.show {
+    opacity: 1; 
+    visibility: visible; 
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures space between h1 and logout */
+    background-color: #52ab98; /* Matches your h1 background */
+    padding: 10px; /* Adds some spacing around the header */
+}
+
+.recipelists-heading{
+    margin: 20px;
+    text-align: center;
+    font-size: xxx-large;
+    text-transform: uppercase;
+}
+
+.recipelists-container {
+    text-align: center;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    font-size: x-large;
+}
+.listmain{
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: center; /* Center items horizontally (optional) */
+    gap: 20px; /* Add spacing between items */
+}
+
+.recipelist-item{
+    flex: 1 1 calc(25% - 20px); /* Each item takes 25% width minus gap for 4 items per row */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.list-poster {
+    width: 300px; /* Set the width of the image */
+    height: 300px; /* Set the height of the image */
+    border-radius: 20px;
+    object-fit: cover; /* This will prevent the image from stretching */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-poster:hover {
+    transform: scale(1.1); /* Zoom-in effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    cursor: pointer;
+}
+
+.recipelists-container button.sort {
+    background-color: #52ab98;
+    display: flex; 
+    color: white;              
+    border: none;               
+    border-radius: 4px;         
+    padding: 5px 10px;        
+    font-size: 15px;           
+    cursor: pointer;           
+    transition: background-color 0.3s ease; 
+}
+
+
+.recipelists-container button.sort:hover, .button-container button.main:hover{
+    background-color: #2b6777;  
+}
+
+
+.recipelists-container button.sort:focus {
+    outline: 2px solid #ffcc00;  
+}
+
+.name-links {
+    text-decoration: none;
+    color: #000000;
+}
+
+.name-links:hover {
+    color: #8a25c5;
+    text-decoration: underline;
+}
+
+.button-container {
+    display: flex;
+    /* align-items: center; */                  
+    gap: 10px;
+    margin: 20px auto;                 
+}
+
+button.main {
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #52ab98;
+    color: white;
+    padding: 5px 10px;        
+    font-size: 15px;
+    height: 40px;              
+}
+
+button.ls {
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #52ab98;
+    color: white;
+    padding: 5px 10px;        
+    font-size: 15px;
+    height: 40px;                
+    text-align: left; /* Ensures button aligns with the text */
+    margin: 10px 20px; /* Aligns the button with labels and input fields */
+}
+
+button.ls:hover{
+    background-color: #22b705;
+    outline: 2px solid #ffffff;
+}
+
+.pag-links {
+    background-color: black;
+}
+.pag-info{
+    padding: 20px;
+    font-size: x-large;
+    margin-top: 10px;
+}
+
+.pag-direct{
+    padding: 5px;
+    font-size: x-large;
+}
+
+.pag-direct a:hover{
+    color:#41ac1d;
+}
+
+.pag-direct a:hover{
+    color:#41ac1d;
+}
+.about-container {
+    font-size: xx-large;
+    margin: 20px auto;
+    justify-content: center;
+    width: 60%;
+    padding: 15px;
+    border-radius: 10px;
+    color: #2b6777;
+}
+
+.form-container {
+    margin: 30px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+
+
+.form-container input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="file"]{
+    font-size: medium;
+}
+
+textarea {
+    resize: none;
+}
+
+.radio-option {
+    margin-right: 10px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.macros .macro-item {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+button.btn-submit {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button.btn-submit:hover {
+    background-color: #218838;
+}
+
+.create-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.pag-container {
+    border-top: 1px solid black;
+    background: transparent !important;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+}
+
+.directpag{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 900;
+}
+
+.directpag:hover{
+    text-decoration: underline;
+    color: #8a25c5;
+}
+
+
+.login-message{
+    text-align: right;
+    margin: 0px;
+    padding-right: 20px;
+}
+
+.credform-container input[type="text"],
+input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.cred{
+   margin-left: auto;
+}
+
+
+button.cred {
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px; 
+    border-radius: 4px;
+    background-color: #224639;
+    color: white;
+    border-color: #ffffff;
+    font-size: 15px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+button.cred:hover {
+    background-color: #de1919;
+    outline: 2px solid #ffffff;
+}
+
+.credform-container{
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+    font-size: x-large;
+    color: #2b6777;
+}
+
+.outer-container{
+    background-color: rgba(255, 255, 255, 0.5); /* Black with 50% opacity */;
+    width: 60%;
+    height: 100%;
+    margin: 10% auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.credform-container h1{
+    color: #2b6777;
+    font-size: 40px;
+    text-align: left;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+} 
+.credform-container p{
+    text-align: left;
+    margin: auto 20px;
+    font-size: 20px;
+}
+
+.label {
+    text-align: left;
+    margin: auto 20px;
+    font-size: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px; 
+}
+
+
+.show-container {
+    max-width: 800px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+.recipe-content img {
+    width: 100%; /* Set the width of the image */
+    height: 500px; /* Set the height of the image */
+    border-radius: 20px;
+    object-fit: cover; /* This will prevent the image from stretching */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.show-container h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+.recipe-sub-details {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.recipe-sub-details span {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Layout for Ingredients and Instructions */
+.ingredients-instructions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.ingredients-instructions .ingredients,
+.ingredients-instructions .instructions {
+    flex: 1;
+}
+
+.ingredients-instructions .ingredients h3,
+.ingredients-instructions .instructions h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.ingredients-instructions p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Macros and additional details */
+.macros {
+    margin-bottom: 20px;
+}
+
+.macros h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    color: #333;
+}
+
+.macro-details {
+    display: flex;
+    gap: 15px;
+}
+
+.macro-details p {
+    margin: 0; 
+    flex-direction: row;
+}
+
+.macro-form input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px; 
+}
+
+/* Buttons */
+.heart-icon {
+    display: inline-block;
+    font-size: 24px;
+    color: white;
+}
+
+.fa-heart {
+    color: #e63946; /* Red for a filled heart */
+}
+
+.fa-regular.fa-heart {
+    color: #ffffff; /* Grey for an outlined heart */
+}
+
+.button-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+}
+
+.mainButtons{
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 10px; 
+}
+
+.btn-submit{
+    width: 50%;
+}
+
+.adminButton-container {
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 10px; 
+} 
+
+.button-container a button,
+.button-container form button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+} 
+
+.button-container a button:hover,
+.button-container form button:hover {
+    background-color: #45a049;
+}
+
+.RListheader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.RListheader h3{
+    font-size: x-large;
+    margin: 0%;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.recplistmain-content{
+    width: 100%;
+}
+
+.filters{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.filter-item select{
+    font-size: 16px;
+    border-radius: 0;
+    border: 1px solid #000000;
+    width: 120px;
+    padding: 3px;
+    text-align: center;
+}
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-bottom: 1px solid #000000;
+}
+.filter-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+.filter-item p{
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+.mainindex{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.search-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #ccc;
+   
+}
+
+.searchButton {
+    background-image: url('/images/icon/search.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: white;
+}
+
+
+.searchBar {
+    font-size: 16px;
+    border: none;
+    padding: 5px;
+    width: 1000px;
+}
+
+.searchBar:focus {
+    outline: none; 
+    border: none; 
+}
+
+input[type="search"].searchBar {
+    margin: auto;
+    text-align: left;
+    font-size: 20px;
+    border-radius: 3px;
+    border: none;
+}
+
+.searchMessage{
+    font-size: xx-large; 
+      
+}
+.searchImg{
+    height: 10px;
+    width: 10px;
+}
+.header-mobile{
+    display: none;
+}
+
+
+@media only screen and (max-width: 980px) {
+
+    .navbar{
+        display: none;
+    }
+    /* .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #23444b;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        height: 70px;
+    }
+    
+    .navbar .logo a {
+        font-size: xx-large;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .navbar .logo span {
+        color: #27ae60;
+    } */
+
+    .nav-list-mobile {
+        flex-direction: row;
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        font-size: 30px;
+        height: 280px;
+    }
+    .header-mobile {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #23444b;
+        color: white;
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .header-wrapper-mobile {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        width: 100%;
+        max-width: 900px;
+        padding: 0 20px; 
+    }
+    
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto; 
+        padding-right: 20px;
+    }
+    
+
+    .desktop-header-wrapper-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-wrapper-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .logo-mobile {
+        font-size: xx-large;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+    .logo-mobile a{
+        text-decoration: none;
+        color: white;
+    }
+    .logo-mobile span{
+        color: #218838;
+    }
+
+    .menu-icon-mobile {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .hide-mobile {
+        display: none;
+    }  
+    
+    .navhidden{
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-list-mobile {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #8c979a;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-opt-mobile {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-link-mobile {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-link-mobile:hover {
+        background-color: #555;
+    }
+
+    .content {
+        max-width: 1500px;
+        margin: 20px auto;
+        margin-bottom: 50px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .home-content{
+        align-items: center;
+    }
+    
+    .guestmessage a{
+        text-decoration: none;
+        color: #27ae60;
+    }
+    
+    .guestmessage a:hover{
+        text-decoration:underline;
+    }
+    
+    .guestmessage p{
+        font-size: xx-large;
+        margin: auto;
+        padding: 100px;
+    }
+    
+    .home-content h2.top{
+        font-size: xx-large;
+        color: #2a4e58;
+        border-bottom: 2px solid #5caa35; 
+        padding-bottom: 10px; 
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .recipe-name {
+        margin-top: 0.5rem;
+        font-size: large;
+        color: #333;
+        text-align: center;
+        cursor: pointer;
+    }
+    .recipe-name:hover {
+        color: #77ce49;
+    }
+    
+    .featured-content{
+        margin: auto;
+        cursor: pointer;
+    }
+    
+    /* Flip card styles */
+    .flip-card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, .flip-card-back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .flip-card-front {
+        background: #f8f9fa;
+        border-radius: 15px;
+    }
+    
+    .flip-card-back {
+        background: #e4e4e4a3;
+        transform: rotateY(180deg);
+        border-radius: 15px;
+    }
+    
+    .flip-card-back a{
+        text-decoration: none;
+        color: #2c9abf;
+        font-size: 30px;
+    }
+
+    .flip-card-back h3{
+        font-size: 30px;
+    }
+    
+    .flip-card-back a:hover{
+        text-decoration: underline;
+        color: #218838;
+    }
+    
+    .hover-text {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        font-size: 16px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    
+    .flip-card-front:hover .hover-text {
+        display: block;
+    }
+    
+    .btn {
+        margin: 5px;
+        height: 60px;
+        padding: 10px 15px;
+        border: none;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .btn:hover {
+        background: #0056b3;
+    }
+    
+    
+    .main-img {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 20px; 
+        justify-content: center; 
+        margin: 20px;
+    }
+    
+    .recipe-item {
+        flex: 1 1 calc(25% - 20px); 
+        max-width: 300px;
+        position: relative; 
+    }
+    
+    .flip-card {
+        width: 300px; 
+        height: 300px; 
+        perspective: 1000px; 
+    }
+    
+    .poster {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 15px; 
+    }
+    
+    .backimg-section {
+        background: url('/Images/back.png') no-repeat center center/cover;
+        width: 100%;
+        height: 30vh;
+        color: white;
+        text-align: center;
+        position: relative;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .backimg-content {
+        background-color: #00000093;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border-collapse: collapse;
+        border-radius: 20px;
+    }
+
+    .backimg-content h1{
+        font-size: xxx-large;
+    }    
+    
+    .bottom-content{
+        border-top: 2px solid #5caa35;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .content-heading{
+        font-size: xx-large;
+        color: #2b6777;
+    }
+    .bottom-content li{
+        font-size: x-large;
+    }
+    .bottom-content a{
+        text-decoration: none;
+        color: #000000;
+    }
+    .bottom-content a:hover{
+        color: #52ab98;
+    }
+    .bottom-content li:hover{
+        color: #22b705;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #efefd4;
+        align-items: center;
+        padding: 20px 0;
+        margin: 0;
+    }
+    
+    .footer-nav {
+        display: flex;
+        gap: 60px;
+        border-top: 1px solid #000;
+        padding-top: 20px;
+    }
+    
+    .fnav-box a {
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .fnav-box a:hover {
+        text-decoration: underline;
+        color: #27ae60;
+    }
+    .flogo{
+        margin: 40px;
+    }
+    .flogo a{
+        font-size: xx-large;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .flogo span {
+        color: #27ae60;
+    }
+    
+    .nav-center {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .nav-box a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .nav-box a.active {
+        border-bottom: 3px solid #27ae60;
+        width: 3000px;
+        color: #ffffff;
+        border-radius: 0px;
+        height: 20px;
+        padding: 5px 10px;
+    }
+    
+    
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+    
+    button.log {
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 15px;
+        height: 30px;
+        background-color: #27ae60;
+        transition: background-color 0.3s ease;
+    }
+    
+    button.log:hover {
+        background-color: #de1919;
+    }
+    
+    .current-user {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .current-user p {
+        color: white;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .current-user .user-menu {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        z-index: 10;
+    }
+    
+    .current-user:hover .user-menu {
+        display: flex;
+    }
+    
+    .user-menu a, 
+    .user-menu button {
+        text-decoration: none;
+        color: #333;
+        padding: 10px 20px;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        background: none;
+        transition: background-color 0.3s ease;
+        width: 100%;
+    }
+    
+    .user-menu a:hover, 
+    .user-menu button:hover {
+        background-color: #f0f0f0;
+    }
+    
+    .user-menu button {
+        border: none;
+        background: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: left;
+        cursor: pointer;
+        color: #333;
+    }
+    
+    .success-message {
+        position: fixed; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        z-index: 9999;
+        background-color: #d4eddad9; 
+        color: #2a9844; 
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-size: xx-large;
+        width: 600px;
+        height: 50px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        opacity: 0; 
+        visibility: hidden;
+        transition: opacity 1s ease, visibility 1s ease; 
+    }
+    
+    .success-message.show {
+        opacity: 1; 
+        visibility: visible; 
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        color: #ffffff;
+        margin-right: 20px;
+    }
+    
+    .nav-link:hover {
+        color: #ffffff;
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        background-color: #52ab98; 
+        padding: 10px; 
+    }
+    
+    .recipelists-heading{
+        margin: 20px;
+        text-align: center;
+        font-size: xxx-large;
+        text-transform: uppercase;
+    }
+    
+    .recipelists-container {
+        text-align: center;
+        width: 100%;
+        margin: 20px auto;
+        border-radius: 10px;
+        font-size: x-large;
+    }
+    .listmain{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 20px; 
+    }
+    
+    .recipelist-item{
+        flex: 1 1 calc(25% - 20px);
+        box-sizing: border-box; 
+    }
+    
+    .list-poster {
+        width: 300px; 
+        height: 300px; 
+        border-radius: 20px;
+        object-fit: cover; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .list-poster:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+    
+    .recipelists-container button.sort {
+        background-color: #52ab98;
+        display: flex; 
+        color: white;              
+        border: none;               
+        border-radius: 4px;         
+        padding: 5px 10px;        
+        font-size: 15px;           
+        cursor: pointer;           
+        transition: background-color 0.3s ease; 
+    }
+    
+    
+    .recipelists-container button.sort:hover, .button-container button.main:hover{
+        background-color: #2b6777;  
+    }
+    
+    
+    .recipelists-container button.sort:focus {
+        outline: 2px solid #ffcc00;  
+    }
+    
+    .name-links {
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    .name-links:hover {
+        color: #8a25c5;
+        text-decoration: underline;
+    }
+    .showButton{
+        display: flex;                 
+        gap: 10px;
+        margin: 20px auto;                 
+    }
+    
+    .button-container {
+        display: flex; 
+        flex-direction: row;
+        align-items: center;                
+        gap: 10px;
+        margin: 20px auto;                 
+    }
+    
+    button.main {
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: #52ab98;
+        color: white;
+        padding: 5px 10px;        
+        font-size: 15px;
+        height: 40px;              
+    }
+    
+    button.ls {
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: #52ab98;
+        color: white;
+        padding: 5px 10px;        
+        font-size: 30px;
+        height: 80px;
+        width: 120px;                
+        text-align: left; 
+        margin: 10px 20px; 
+    }
+    
+    button.ls:hover{
+        background-color: #22b705;
+        outline: 2px solid #ffffff;
+    }
+    
+    .pag-links {
+        background-color: black;
+    }
+    .pag-info{
+        padding: 40px;
+        font-size: x-large;
+        margin-top: 10px;
+    }
+    
+    .pag-direct{
+        padding: 5px;
+        font-size: xx-large;
+    }
+    
+    .pag-direct a:hover{
+        color:#41ac1d;
+    }
+    
+    .pag-direct a:hover{
+        color:#41ac1d;
+    }
+    .about-container {
+        font-size: xx-large;
+        margin: 20px auto;
+        justify-content: center;
+        width: 60%;
+        padding: 15px;
+        border-radius: 10px;
+        color: #2b6777;
+    }
+    
+    .form-container {
+        margin: 30px auto;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+    }
+
+    input [type="file"]{
+        width: 200px;
+        font-size: large;
+        height: 200px;
+    }
+
+    .form-group img{
+        width: 300px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+    }
+    
+    
+    
+    .form-container input[type="text"],
+    input[type="number"],
+    textarea,
+    select {
+        width: 400px;
+        height: 100px;
+        padding: 10px;
+        font-size: 30px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    input[type="file"]{
+        font-size: medium;
+    }
+    legend{
+        font-size: 40px;
+    }
+    label{
+        font-size: 35px;
+    }
+    
+    /* textarea {
+        resize:;
+    } */
+    
+    .radio-option {
+        margin-right: 10px;
+        font-size: 30px;
+    }
+    
+    fieldset {
+        border: none;
+        margin-bottom: 20px;
+    }
+    
+    .macros .macro-item {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .macro-details{
+        font-size: x-large;
+    }
+    
+    button.btn-submit {
+        background-color: #28a745;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 30px;
+        cursor: pointer;
+        width: 100%;
+        height: 80px;
+        transition: background-color 0.3s;
+    }
+    
+    button.btn-submit:hover {
+        background-color: #218838;
+    }
+    
+    .create-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    
+    .pag-container {
+        border-top: 1px solid black;
+        background: transparent !important;
+        justify-content: center;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    .directpag{
+        text-decoration: none;
+        color: #000000;
+        font-weight: 900;
+    }
+    
+    .directpag:hover{
+        text-decoration: underline;
+        color: #8a25c5;
+    }
+    
+    
+    .login-message{
+        text-align: right;
+        margin: 0px;
+        padding-right: 20px;
+    }
+    .credform-container label{
+        font-size: 45px;
+    }
+    
+    .credform-container input[type="text"],
+    input[type="password"]{
+        width: 100%;
+        height: 80px;
+        padding: 10px;
+        font-size: 30px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .cred{
+       margin-left: auto;
+    }
+    
+    
+    button.cred {
+        border: none;
+        cursor: pointer;
+        padding: 5px 10px; 
+        border-radius: 4px;
+        background-color: #224639;
+        color: white;
+        border-color: #ffffff;
+        font-size: 15px;
+        height: 40px;
+        transition: background-color 0.3s ease;
+    }
+    
+    button.cred:hover {
+        background-color: #de1919;
+        outline: 2px solid #ffffff;
+    }
+    
+    .credform-container{
+        width: 100%;
+        height: 80%;
+        border-collapse: collapse;
+        text-align: center;
+        margin: auto;
+        font-size: xx-large;
+        color: #2b6777;
+    }
+    
+    .outer-container{
+        background-color: rgba(255, 255, 255, 0.5); /* Black with 50% opacity */;
+        width: 60%;
+        margin: 10% auto;
+        text-align: center;
+        border-radius: 20px;
+    }
+    
+    .credform-container h1{
+        color: #2b6777;
+        font-size: 80px;
+        text-align: left;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    } 
+    .credform-container p{
+        text-align: left;
+        margin: auto 20px;
+        font-size: 40px;
+    }
+    
+    .label {
+        text-align: left;
+        margin: auto 20px;
+        font-size: 20px;
+    }
+    
+    .form-field {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 20px; 
+    }
+    
+    
+    .show-container {
+        max-width: 800px;
+        height: auto;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 20px;
+    }
+    
+    
+    .recipe-content img {
+        width: 100%; /* Set the width of the image */
+        height: 500px; /* Set the height of the image */
+        border-radius: 20px;
+        object-fit: cover; /* This will prevent the image from stretching */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    
+    .show-container h2 {
+        font-size: 28px;
+        text-align: center;
+        color: #2b2b2b;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    
+    
+    .recipe-sub-details {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #555;
+    }
+    
+    .recipe-sub-details span {
+        display: inline-block;
+        margin: 0 10px;
+        font-weight: bold;
+    }
+    
+    /* Layout for Ingredients and Instructions */
+    .ingredients-instructions {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+    
+    .ingredients-instructions .ingredients,
+    .ingredients-instructions .instructions {
+        flex: 1;
+    }
+    
+    .ingredients-instructions .ingredients h3,
+    .ingredients-instructions .instructions h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+    }
+    
+    .ingredients-instructions p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+    
+    /* Macros and additional details */
+    .macros {
+        margin-bottom: 20px;
+    }
+    
+    .macros h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+        color: #333;
+    }
+    
+    .macro-details {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .macro-details p {
+        margin: 0; 
+        flex-direction: row;
+    }
+    
+    .macro-form input[type="number"] {
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 80px; 
+    }
+    
+    .button-container {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%;
+    }
+    
+    .mainButtons{
+        display: flex; 
+        justify-content: flex-end; 
+        gap: 10px; 
+    }
+
+    /* button.mainButtons{
+        width: 100%;
+    } */
+    
+    .btn-submit{
+        width: 50%;
+    }
+    
+    .adminButton-container {
+        display: flex; 
+        justify-content: flex-end; 
+        gap: 10px; 
+    } 
+    
+    .button-container a button,
+    .button-container form button {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        width: 180px;
+        height: 60px;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        font-size: 40px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    } 
+    
+    .button-container a button:hover,
+    .button-container form button:hover {
+        background-color: #45a049;
+    }
+    
+    .RListheader{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .RListheader h3{
+        font-size: xx-large;
+        margin: 0%;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+    
+    .recplistmain-content{
+        width: 100%;
+    }
+    
+    .filters{
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .filter-item select{
+        font-size: 16px;
+        border-radius: 0;
+        border: 1px solid #000000;
+        width: 120px;
+        padding: 3px;
+        text-align: center;
+    }
+    
+    .filters{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        border-bottom: 1px solid #000000;
+    }
+    .filter-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+    }
+    
+    .filter-item p{
+        border: none;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        padding: 0 10px;
+        text-transform: uppercase;
+    }
+    
+    .mainindex{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .search-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 2px solid #ccc;
+       
+    }
+    
+    .searchButton {
+        background-image: url('/images/icon/search.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 30px;
+        height: 30px;
+        background-color: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: white;
+    }
+    
+    
+    .searchBar {
+        font-size: 30px;
+        border: none;
+        padding: 5px;
+        width: 400px;
+        height: 100px;
+    }
+    
+    .searchBar:focus {
+        outline: none; 
+        border: none; 
+    }
+    
+    input[type="search"].searchBar {
+        margin: auto;
+        text-align: left;
+        font-size: 30px;
+        border-radius: 3px;
+        border: none;
+    }
+    
+    .searchMessage{
+        font-size: xx-large; 
+          
+    }
+    .searchImg{
+        height: 10px;
+        width: 10px;
+    }
+    .navbar-mobile{
+        display: none;
+    }
+}

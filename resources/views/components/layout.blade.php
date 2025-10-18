@@ -3,13 +3,14 @@
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>
-        @isset($title) 
-        {{ $title }} | The RecipeBook 
-        @else The RecipeBook 
+        @isset($title)
+        {{ $title }} | The RecipeBook
+        @else The RecipeBook
         @endisset
     </title>
     <link rel="icon" href="{{ asset('images/icon/main.ico') }}" type="image/x-icon"/>
-    <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css"/>
+    {{-- <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css"/> --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <nav class="navbar">
@@ -20,12 +21,12 @@
             <div class="nav-box"><a href="/" class="nav-link">Home</a></div>
             @auth
                 <div class="nav-box"><a href="/recipesbook/recipesList" class="nav-link">Recipes List</a></div>
-                <div class="nav-box"><a href="/recipesbook/savedRecipes" class="nav-link">Saved Recipes</a></div> 
+                <div class="nav-box"><a href="/recipesbook/savedRecipes" class="nav-link">Saved Recipes</a></div>
                 @can('edit')
                 <div class="nav-box"><a href="/recipesbook/create" class="nav-link">Add New Recipe</a></div>
                 @endcan
-            @endauth    
-            <div class="nav-box"><a href="/recipesbook/about" class="nav-link">About</a></div>                      
+            @endauth
+            <div class="nav-box"><a href="/recipesbook/about" class="nav-link">About</a></div>
         </div>
         @auth
         <div class="current-user dropdown">
@@ -36,7 +37,7 @@
                     <button type="submit" style="border: none; background: none; padding: 10px 20px; text-align: left; cursor: pointer;">Logout</button>
                 </form>
             </div>
-        </div>        
+        </div>
         @endauth
         @guest
         <form method="GET" action="/recipesbook/login" class="nav-right">
@@ -69,14 +70,14 @@
                         <div class="nav-box"><a href="/" class="nav-link">Home</a></div>
                         @auth
                         <div class="nav-box"><a href="/recipesbook/recipesList" class="nav-link">Recipes List</a></div>
-                            <div class="nav-box"><a href="/recipesbook/savedRecipes" class="nav-link">Saved Recipes</a></div> 
+                            <div class="nav-box"><a href="/recipesbook/savedRecipes" class="nav-link">Saved Recipes</a></div>
                             @can('edit')
                             <div class="nav-box"><a href="/recipesbook/create" class="nav-link">Add New Recipe</a></div>
                             @endcan
-                        @endauth    
-                        <div class="nav-box"><a href="/recipesbook/about" class="nav-link">About</a></div>                      
+                        @endauth
+                        <div class="nav-box"><a href="/recipesbook/about" class="nav-link">About</a></div>
                         @auth
-                            <div class="nav-box"><a href="/recipesbook/about" class="nav-link">Logout</a></div>           
+                            <div class="nav-box"><a href="/recipesbook/about" class="nav-link">Logout</a></div>
                         @endauth
                         @guest
                             <form method="GET" action="/recipesbook/login" class="nav-right">
@@ -84,11 +85,11 @@
                                 <button type="submit" class="log">Log In</button>
                             </form>
                         @endguest
-                    </div>           
+                    </div>
                 </ul>
-            </nav>            
+            </nav>
         </div>
-    </div>       
+    </div>
     <div class="content">
 
         @if(session('success'))
@@ -101,7 +102,7 @@
             {{ session('error') }}
         </div>
         @endif
-    
+
         {{$slot}}
     </div>
     <script src="{{ asset('js/mobileNav.js') }}" defer></script>
@@ -122,9 +123,9 @@
             @auth
             <div class="fnav-box"><a href="/recipesbook/recipesList" class="nav-link">Recipes List</a></div>
             @endauth
-            <div class="fnav-box"><a href="/recipesbook/about" class="nav-link">About</a></div>                      
+            <div class="fnav-box"><a href="/recipesbook/about" class="nav-link">About</a></div>
         </div>
-        
+
     </div>
 </body>
 </html>
