@@ -34,8 +34,8 @@ body {
 .home-content h2.top{
     font-size: xx-large;
     color: #2a4e58;
-    border-bottom: 2px solid #5caa35; 
-    padding-bottom: 10px; 
+    border-bottom: 2px solid #5caa35;
+    padding-bottom: 10px;
     display: inline-block;
     width: 100%;
 }
@@ -135,33 +135,33 @@ body {
 
 .main-img {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin: 20px;
 }
 
 .recipe-item {
-    flex: 1 1 calc(25% - 20px); 
+    flex: 1 1 calc(25% - 20px);
     max-width: 300px;
-    position: relative; 
+    position: relative;
 }
 
 .flip-card {
-    width: 300px; 
-    height: 300px; 
-    perspective: 1000px; 
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
 }
 
 .poster {
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    object-fit: cover; 
-    border-radius: 15px; 
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .backimg-section {
-    background: url('/Images/back.png') no-repeat center center/cover;
+    background: url('/images/back.png') no-repeat center center/cover;
     width: 100%;
     height: 30vh;
     color: white;
@@ -343,7 +343,7 @@ button.log:hover {
     display: flex;
 }
 
-.user-menu a, 
+.user-menu a,
 .user-menu button {
     text-decoration: none;
     color: #333;
@@ -356,7 +356,7 @@ button.log:hover {
     width: 100%;
 }
 
-.user-menu a:hover, 
+.user-menu a:hover,
 .user-menu button:hover {
     background-color: #f0f0f0;
 }
@@ -372,13 +372,13 @@ button.log:hover {
 }
 
 .success-message {
-    position: fixed; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 9999;
-    background-color: #d4eddad9; 
-    color: #2a9844; 
+    background-color: #d4eddad9;
+    color: #2a9844;
     padding: 15px 30px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -388,8 +388,8 @@ button.log:hover {
 }
 
 .success-message.show {
-    opacity: 1; 
-    visibility: visible; 
+    opacity: 1;
+    visibility: visible;
 }
 
 .nav-link {
@@ -452,24 +452,24 @@ button.log:hover {
 
 .recipelists-container button.sort {
     background-color: #52ab98;
-    display: flex; 
-    color: white;              
-    border: none;               
-    border-radius: 4px;         
-    padding: 5px 10px;        
-    font-size: 15px;           
-    cursor: pointer;           
-    transition: background-color 0.3s ease; 
+    display: flex;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 
 .recipelists-container button.sort:hover, .button-container button.main:hover{
-    background-color: #2b6777;  
+    background-color: #2b6777;
 }
 
 
 .recipelists-container button.sort:focus {
-    outline: 2px solid #ffcc00;  
+    outline: 2px solid #ffcc00;
 }
 
 .name-links {
@@ -484,9 +484,9 @@ button.log:hover {
 
 .button-container {
     display: flex;
-    /* align-items: center; */                  
+    /* align-items: center; */
     gap: 10px;
-    margin: 20px auto;                 
+    margin: 20px auto;
 }
 
 button.main {
@@ -495,9 +495,9 @@ button.main {
     border-radius: 4px;
     background-color: #52ab98;
     color: white;
-    padding: 5px 10px;        
+    padding: 5px 10px;
     font-size: 15px;
-    height: 40px;              
+    height: 40px;
 }
 
 button.ls {
@@ -506,9 +506,9 @@ button.ls {
     border-radius: 4px;
     background-color: #52ab98;
     color: white;
-    padding: 5px 10px;        
+    padding: 5px 10px;
     font-size: 15px;
-    height: 40px;                
+    height: 40px;
     text-align: left; /* Ensures button aligns with the text */
     margin: 10px 20px; /* Aligns the button with labels and input fields */
 }
@@ -673,7 +673,7 @@ input[type="password"]{
 button.cred {
     border: none;
     cursor: pointer;
-    padding: 5px 10px; 
+    padding: 5px 10px;
     border-radius: 4px;
     background-color: #224639;
     color: white;
@@ -712,7 +712,7 @@ button.cred:hover {
     text-align: left;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-} 
+}
 .credform-container p{
     text-align: left;
     margin: auto 20px;
@@ -728,7 +728,7 @@ button.cred:hover {
 .form-field {
     display: flex;
     flex-direction: column;
-    margin: 10px 20px; 
+    margin: 10px 20px;
 }
 
 
@@ -819,7 +819,7 @@ button.cred:hover {
 }
 
 .macro-details p {
-    margin: 0; 
+    margin: 0;
     flex-direction: row;
 }
 
@@ -828,7 +828,7 @@ button.cred:hover {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 80px; 
+    width: 80px;
 }
 
 /* Buttons */
@@ -847,16 +847,16 @@ button.cred:hover {
 }
 
 .button-container {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
 .mainButtons{
-    display: flex; 
-    justify-content: flex-end; 
-    gap: 10px; 
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .btn-submit{
@@ -864,10 +864,10 @@ button.cred:hover {
 }
 
 .adminButton-container {
-    display: flex; 
-    justify-content: flex-end; 
-    gap: 10px; 
-} 
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
 
 .button-container a button,
 .button-container form button {
@@ -880,7 +880,7 @@ button.cred:hover {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-} 
+}
 
 .button-container a button:hover,
 .button-container form button:hover {
@@ -954,7 +954,7 @@ button.cred:hover {
     flex-direction: row;
     align-items: center;
     border: 2px solid #ccc;
-   
+
 }
 
 .searchButton {
@@ -980,8 +980,8 @@ button.cred:hover {
 }
 
 .searchBar:focus {
-    outline: none; 
-    border: none; 
+    outline: none;
+    border: none;
 }
 
 input[type="search"].searchBar {
@@ -993,8 +993,8 @@ input[type="search"].searchBar {
 }
 
 .searchMessage{
-    font-size: xx-large; 
-      
+    font-size: xx-large;
+
 }
 .searchImg{
     height: 10px;
@@ -1019,14 +1019,14 @@ input[type="search"].searchBar {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         height: 70px;
     }
-    
+
     .navbar .logo a {
         font-size: xx-large;
         font-weight: bold;
         color: #fff;
         text-decoration: none;
     }
-    
+
     .navbar .logo span {
         color: #27ae60;
     } */
@@ -1056,21 +1056,21 @@ input[type="search"].searchBar {
 
     .header-wrapper-mobile {
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: center;
         width: 100%;
         max-width: 900px;
-        padding: 0 20px; 
+        padding: 0 20px;
     }
-    
+
     .icon {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: auto; 
+        margin-left: auto;
         padding-right: 20px;
     }
-    
+
 
     .desktop-header-wrapper-mobile {
         display: flex;
@@ -1108,15 +1108,15 @@ input[type="search"].searchBar {
 
     .hide-mobile {
         display: none;
-    }  
-    
+    }
+
     .navhidden{
         font-size: 30px;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .nav-list-mobile {
         list-style: none;
         margin: 0;
@@ -1156,35 +1156,35 @@ input[type="search"].searchBar {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .home-content{
         align-items: center;
     }
-    
+
     .guestmessage a{
         text-decoration: none;
         color: #27ae60;
     }
-    
+
     .guestmessage a:hover{
         text-decoration:underline;
     }
-    
+
     .guestmessage p{
         font-size: xx-large;
         margin: auto;
         padding: 100px;
     }
-    
+
     .home-content h2.top{
         font-size: xx-large;
         color: #2a4e58;
-        border-bottom: 2px solid #5caa35; 
-        padding-bottom: 10px; 
+        border-bottom: 2px solid #5caa35;
+        padding-bottom: 10px;
         display: inline-block;
         width: 100%;
     }
-    
+
     .recipe-name {
         margin-top: 0.5rem;
         font-size: large;
@@ -1195,12 +1195,12 @@ input[type="search"].searchBar {
     .recipe-name:hover {
         color: #77ce49;
     }
-    
+
     .featured-content{
         margin: auto;
         cursor: pointer;
     }
-    
+
     /* Flip card styles */
     .flip-card-inner {
         width: 100%;
@@ -1209,11 +1209,11 @@ input[type="search"].searchBar {
         transform-style: preserve-3d;
         position: relative;
     }
-    
+
     .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg);
     }
-    
+
     .flip-card-front, .flip-card-back {
         backface-visibility: hidden;
         position: absolute;
@@ -1226,18 +1226,18 @@ input[type="search"].searchBar {
         align-items: center;
         flex-direction: column;
     }
-    
+
     .flip-card-front {
         background: #f8f9fa;
         border-radius: 15px;
     }
-    
+
     .flip-card-back {
         background: #e4e4e4a3;
         transform: rotateY(180deg);
         border-radius: 15px;
     }
-    
+
     .flip-card-back a{
         text-decoration: none;
         color: #2c9abf;
@@ -1247,12 +1247,12 @@ input[type="search"].searchBar {
     .flip-card-back h3{
         font-size: 30px;
     }
-    
+
     .flip-card-back a:hover{
         text-decoration: underline;
         color: #218838;
     }
-    
+
     .hover-text {
         display: none;
         position: absolute;
@@ -1263,11 +1263,11 @@ input[type="search"].searchBar {
         padding: 5px 10px;
         border-radius: 5px;
     }
-    
+
     .flip-card-front:hover .hover-text {
         display: block;
     }
-    
+
     .btn {
         margin: 5px;
         height: 60px;
@@ -1278,39 +1278,39 @@ input[type="search"].searchBar {
         cursor: pointer;
         border-radius: 5px;
     }
-    
+
     .btn:hover {
         background: #0056b3;
     }
-    
-    
+
+
     .main-img {
         display: flex;
-        flex-wrap: wrap; 
-        gap: 20px; 
-        justify-content: center; 
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
         margin: 20px;
     }
-    
+
     .recipe-item {
-        flex: 1 1 calc(25% - 20px); 
+        flex: 1 1 calc(25% - 20px);
         max-width: 300px;
-        position: relative; 
+        position: relative;
     }
-    
+
     .flip-card {
-        width: 300px; 
-        height: 300px; 
-        perspective: 1000px; 
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
     }
-    
+
     .poster {
-        width: 100%; 
+        width: 100%;
         height: 100%;
-        object-fit: cover; 
-        border-radius: 15px; 
+        object-fit: cover;
+        border-radius: 15px;
     }
-    
+
     .backimg-section {
         background: url('/Images/back.png') no-repeat center center/cover;
         width: 100%;
@@ -1322,7 +1322,7 @@ input[type="search"].searchBar {
         border-bottom-left-radius: 10px;
         overflow: hidden;
     }
-    
+
     .backimg-content {
         background-color: #00000093;
         position: absolute;
@@ -1336,8 +1336,8 @@ input[type="search"].searchBar {
 
     .backimg-content h1{
         font-size: xxx-large;
-    }    
-    
+    }
+
     .bottom-content{
         border-top: 2px solid #5caa35;
         display: flex;
@@ -1345,7 +1345,7 @@ input[type="search"].searchBar {
         justify-content: center;
         gap: 30px;
     }
-    
+
     .content-heading{
         font-size: xx-large;
         color: #2b6777;
@@ -1363,7 +1363,7 @@ input[type="search"].searchBar {
     .bottom-content li:hover{
         color: #22b705;
     }
-    
+
     .footer {
         display: flex;
         flex-direction: column;
@@ -1372,19 +1372,19 @@ input[type="search"].searchBar {
         padding: 20px 0;
         margin: 0;
     }
-    
+
     .footer-nav {
         display: flex;
         gap: 60px;
         border-top: 1px solid #000;
         padding-top: 20px;
     }
-    
+
     .fnav-box a {
         color: #000;
         text-decoration: none;
     }
-    
+
     .fnav-box a:hover {
         text-decoration: underline;
         color: #27ae60;
@@ -1398,17 +1398,17 @@ input[type="search"].searchBar {
         color: #fff;
         text-decoration: none;
     }
-    
+
     .flogo span {
         color: #27ae60;
     }
-    
+
     .nav-center {
         display: flex;
         flex-direction: row;
         gap: 20px;
     }
-    
+
     .nav-box a {
         text-decoration: none;
         color: #ffffff;
@@ -1416,7 +1416,7 @@ input[type="search"].searchBar {
         border-radius: 5px;
         transition: background-color 0.3s ease;
     }
-    
+
     .nav-box a.active {
         border-bottom: 3px solid #27ae60;
         width: 3000px;
@@ -1425,13 +1425,13 @@ input[type="search"].searchBar {
         height: 20px;
         padding: 5px 10px;
     }
-    
-    
+
+
     .nav-right {
         display: flex;
         align-items: center;
     }
-    
+
     button.log {
         border: none;
         color: white;
@@ -1442,18 +1442,18 @@ input[type="search"].searchBar {
         background-color: #27ae60;
         transition: background-color 0.3s ease;
     }
-    
+
     button.log:hover {
         background-color: #de1919;
     }
-    
+
     .current-user {
         position: relative;
         display: flex;
         align-items: center;
         cursor: pointer;
     }
-    
+
     .current-user p {
         color: white;
         margin: 0;
@@ -1461,7 +1461,7 @@ input[type="search"].searchBar {
         align-items: center;
         gap: 5px;
     }
-    
+
     .current-user .user-menu {
         position: absolute;
         top: 30px;
@@ -1474,12 +1474,12 @@ input[type="search"].searchBar {
         flex-direction: column;
         z-index: 10;
     }
-    
+
     .current-user:hover .user-menu {
         display: flex;
     }
-    
-    .user-menu a, 
+
+    .user-menu a,
     .user-menu button {
         text-decoration: none;
         color: #333;
@@ -1491,12 +1491,12 @@ input[type="search"].searchBar {
         transition: background-color 0.3s ease;
         width: 100%;
     }
-    
-    .user-menu a:hover, 
+
+    .user-menu a:hover,
     .user-menu button:hover {
         background-color: #f0f0f0;
     }
-    
+
     .user-menu button {
         border: none;
         background: none;
@@ -1506,56 +1506,56 @@ input[type="search"].searchBar {
         cursor: pointer;
         color: #333;
     }
-    
+
     .success-message {
-        position: fixed; 
-        top: 50%; 
-        left: 50%; 
-        transform: translate(-50%, -50%); 
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 9999;
-        background-color: #d4eddad9; 
-        color: #2a9844; 
+        background-color: #d4eddad9;
+        color: #2a9844;
         padding: 15px 30px;
         border-radius: 5px;
         font-size: xx-large;
         width: 600px;
         height: 50px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        opacity: 0; 
+        opacity: 0;
         visibility: hidden;
-        transition: opacity 1s ease, visibility 1s ease; 
+        transition: opacity 1s ease, visibility 1s ease;
     }
-    
+
     .success-message.show {
-        opacity: 1; 
-        visibility: visible; 
+        opacity: 1;
+        visibility: visible;
     }
-    
+
     .nav-link {
         text-decoration: none;
         color: #ffffff;
         margin-right: 20px;
     }
-    
+
     .nav-link:hover {
         color: #ffffff;
     }
-    
+
     .header {
         display: flex;
         align-items: center;
-        justify-content: space-between; 
-        background-color: #52ab98; 
-        padding: 10px; 
+        justify-content: space-between;
+        background-color: #52ab98;
+        padding: 10px;
     }
-    
+
     .recipelists-heading{
         margin: 20px;
         text-align: center;
         font-size: xxx-large;
         text-transform: uppercase;
     }
-    
+
     .recipelists-container {
         text-align: center;
         width: 100%;
@@ -1565,105 +1565,105 @@ input[type="search"].searchBar {
     }
     .listmain{
         display: flex;
-        flex-wrap: wrap; 
-        justify-content: center; 
-        gap: 20px; 
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
-    
+
     .recipelist-item{
         flex: 1 1 calc(25% - 20px);
-        box-sizing: border-box; 
+        box-sizing: border-box;
     }
-    
+
     .list-poster {
-        width: 300px; 
-        height: 300px; 
+        width: 300px;
+        height: 300px;
         border-radius: 20px;
-        object-fit: cover; 
+        object-fit: cover;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
+
     .list-poster:hover {
         transform: scale(1.1);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         cursor: pointer;
     }
-    
+
     .recipelists-container button.sort {
         background-color: #52ab98;
-        display: flex; 
-        color: white;              
-        border: none;               
-        border-radius: 4px;         
-        padding: 5px 10px;        
-        font-size: 15px;           
-        cursor: pointer;           
-        transition: background-color 0.3s ease; 
+        display: flex;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
-    
-    
+
+
     .recipelists-container button.sort:hover, .button-container button.main:hover{
-        background-color: #2b6777;  
+        background-color: #2b6777;
     }
-    
-    
+
+
     .recipelists-container button.sort:focus {
-        outline: 2px solid #ffcc00;  
+        outline: 2px solid #ffcc00;
     }
-    
+
     .name-links {
         text-decoration: none;
         color: #000000;
     }
-    
+
     .name-links:hover {
         color: #8a25c5;
         text-decoration: underline;
     }
     .showButton{
-        display: flex;                 
+        display: flex;
         gap: 10px;
-        margin: 20px auto;                 
+        margin: 20px auto;
     }
-    
+
     .button-container {
-        display: flex; 
+        display: flex;
         flex-direction: row;
-        align-items: center;                
+        align-items: center;
         gap: 10px;
-        margin: 20px auto;                 
+        margin: 20px auto;
     }
-    
+
     button.main {
         border: none;
         cursor: pointer;
         border-radius: 4px;
         background-color: #52ab98;
         color: white;
-        padding: 5px 10px;        
+        padding: 5px 10px;
         font-size: 15px;
-        height: 40px;              
+        height: 40px;
     }
-    
+
     button.ls {
         border: none;
         cursor: pointer;
         border-radius: 4px;
         background-color: #52ab98;
         color: white;
-        padding: 5px 10px;        
+        padding: 5px 10px;
         font-size: 30px;
         height: 80px;
-        width: 120px;                
-        text-align: left; 
-        margin: 10px 20px; 
+        width: 120px;
+        text-align: left;
+        margin: 10px 20px;
     }
-    
+
     button.ls:hover{
         background-color: #22b705;
         outline: 2px solid #ffffff;
     }
-    
+
     .pag-links {
         background-color: black;
     }
@@ -1672,16 +1672,16 @@ input[type="search"].searchBar {
         font-size: x-large;
         margin-top: 10px;
     }
-    
+
     .pag-direct{
         padding: 5px;
         font-size: xx-large;
     }
-    
+
     .pag-direct a:hover{
         color:#41ac1d;
     }
-    
+
     .pag-direct a:hover{
         color:#41ac1d;
     }
@@ -1694,7 +1694,7 @@ input[type="search"].searchBar {
         border-radius: 10px;
         color: #2b6777;
     }
-    
+
     .form-container {
         margin: 30px auto;
         padding: 20px;
@@ -1713,20 +1713,20 @@ input[type="search"].searchBar {
     .form-group img{
         width: 300px;
     }
-    
+
     .form-group {
         margin-bottom: 20px;
     }
-    
+
     label {
         display: block;
         font-weight: bold;
         margin-bottom: 8px;
         color: #333;
     }
-    
-    
-    
+
+
+
     .form-container input[type="text"],
     input[type="number"],
     textarea,
@@ -1739,7 +1739,7 @@ input[type="search"].searchBar {
         border-radius: 4px;
         box-sizing: border-box;
     }
-    
+
     input[type="file"]{
         font-size: medium;
     }
@@ -1749,21 +1749,21 @@ input[type="search"].searchBar {
     label{
         font-size: 35px;
     }
-    
+
     /* textarea {
         resize:;
     } */
-    
+
     .radio-option {
         margin-right: 10px;
         font-size: 30px;
     }
-    
+
     fieldset {
         border: none;
         margin-bottom: 20px;
     }
-    
+
     .macros .macro-item {
         margin-bottom: 15px;
         display: flex;
@@ -1773,7 +1773,7 @@ input[type="search"].searchBar {
     .macro-details{
         font-size: x-large;
     }
-    
+
     button.btn-submit {
         background-color: #28a745;
         color: #fff;
@@ -1786,17 +1786,17 @@ input[type="search"].searchBar {
         height: 80px;
         transition: background-color 0.3s;
     }
-    
+
     button.btn-submit:hover {
         background-color: #218838;
     }
-    
+
     .create-message {
         color: red;
         font-size: 14px;
         margin-top: 5px;
     }
-    
+
     .pag-container {
         border-top: 1px solid black;
         background: transparent !important;
@@ -1804,19 +1804,19 @@ input[type="search"].searchBar {
         text-decoration: none;
         text-align: center;
     }
-    
+
     .directpag{
         text-decoration: none;
         color: #000000;
         font-weight: 900;
     }
-    
+
     .directpag:hover{
         text-decoration: underline;
         color: #8a25c5;
     }
-    
-    
+
+
     .login-message{
         text-align: right;
         margin: 0px;
@@ -1825,7 +1825,7 @@ input[type="search"].searchBar {
     .credform-container label{
         font-size: 45px;
     }
-    
+
     .credform-container input[type="text"],
     input[type="password"]{
         width: 100%;
@@ -1836,16 +1836,16 @@ input[type="search"].searchBar {
         border-radius: 4px;
         box-sizing: border-box;
     }
-    
+
     .cred{
        margin-left: auto;
     }
-    
-    
+
+
     button.cred {
         border: none;
         cursor: pointer;
-        padding: 5px 10px; 
+        padding: 5px 10px;
         border-radius: 4px;
         background-color: #224639;
         color: white;
@@ -1854,12 +1854,12 @@ input[type="search"].searchBar {
         height: 40px;
         transition: background-color 0.3s ease;
     }
-    
+
     button.cred:hover {
         background-color: #de1919;
         outline: 2px solid #ffffff;
     }
-    
+
     .credform-container{
         width: 100%;
         height: 80%;
@@ -1869,7 +1869,7 @@ input[type="search"].searchBar {
         font-size: xx-large;
         color: #2b6777;
     }
-    
+
     .outer-container{
         background-color: rgba(255, 255, 255, 0.5); /* Black with 50% opacity */;
         width: 60%;
@@ -1877,33 +1877,33 @@ input[type="search"].searchBar {
         text-align: center;
         border-radius: 20px;
     }
-    
+
     .credform-container h1{
         color: #2b6777;
         font-size: 80px;
         text-align: left;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-    } 
+    }
     .credform-container p{
         text-align: left;
         margin: auto 20px;
         font-size: 40px;
     }
-    
+
     .label {
         text-align: left;
         margin: auto 20px;
         font-size: 20px;
     }
-    
+
     .form-field {
         display: flex;
         flex-direction: column;
-        margin: 10px 20px; 
+        margin: 10px 20px;
     }
-    
-    
+
+
     .show-container {
         max-width: 800px;
         height: auto;
@@ -1913,8 +1913,8 @@ input[type="search"].searchBar {
         overflow: hidden;
         padding: 20px;
     }
-    
-    
+
+
     .recipe-content img {
         width: 100%; /* Set the width of the image */
         height: 500px; /* Set the height of the image */
@@ -1922,8 +1922,8 @@ input[type="search"].searchBar {
         object-fit: cover; /* This will prevent the image from stretching */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
-    
+
+
     .show-container h2 {
         font-size: 28px;
         text-align: center;
@@ -1931,21 +1931,21 @@ input[type="search"].searchBar {
         margin-bottom: 10px;
         text-transform: uppercase;
     }
-    
-    
+
+
     .recipe-sub-details {
         text-align: center;
         margin-bottom: 20px;
         font-size: 14px;
         color: #555;
     }
-    
+
     .recipe-sub-details span {
         display: inline-block;
         margin: 0 10px;
         font-weight: bold;
     }
-    
+
     /* Layout for Ingredients and Instructions */
     .ingredients-instructions {
         display: flex;
@@ -1953,12 +1953,12 @@ input[type="search"].searchBar {
         margin-bottom: 20px;
         gap: 20px;
     }
-    
+
     .ingredients-instructions .ingredients,
     .ingredients-instructions .instructions {
         flex: 1;
     }
-    
+
     .ingredients-instructions .ingredients h3,
     .ingredients-instructions .instructions h3 {
         font-size: 20px;
@@ -1967,17 +1967,17 @@ input[type="search"].searchBar {
         border-bottom: 2px solid #ddd;
         padding-bottom: 5px;
     }
-    
+
     .ingredients-instructions p {
         margin-bottom: 10px;
         line-height: 1.6;
     }
-    
+
     /* Macros and additional details */
     .macros {
         margin-bottom: 20px;
     }
-    
+
     .macros h3 {
         font-size: 28px;
         margin-bottom: 10px;
@@ -1985,52 +1985,52 @@ input[type="search"].searchBar {
         padding-bottom: 5px;
         color: #333;
     }
-    
+
     .macro-details {
         display: flex;
         gap: 15px;
     }
-    
+
     .macro-details p {
-        margin: 0; 
+        margin: 0;
         flex-direction: row;
     }
-    
+
     .macro-form input[type="number"] {
         padding: 5px;
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 4px;
-        width: 80px; 
+        width: 80px;
     }
-    
+
     .button-container {
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
     }
-    
+
     .mainButtons{
-        display: flex; 
-        justify-content: flex-end; 
-        gap: 10px; 
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
     }
 
     /* button.mainButtons{
         width: 100%;
     } */
-    
+
     .btn-submit{
         width: 50%;
     }
-    
+
     .adminButton-container {
-        display: flex; 
-        justify-content: flex-end; 
-        gap: 10px; 
-    } 
-    
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
     .button-container a button,
     .button-container form button {
         background-color: #4CAF50;
@@ -2044,30 +2044,30 @@ input[type="search"].searchBar {
         font-size: 40px;
         cursor: pointer;
         transition: background-color 0.3s;
-    } 
-    
+    }
+
     .button-container a button:hover,
     .button-container form button:hover {
         background-color: #45a049;
     }
-    
+
     .RListheader{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .RListheader h3{
         font-size: xx-large;
         margin: 0%;
         margin-top: 10px;
         text-transform: uppercase;
     }
-    
+
     .recplistmain-content{
         width: 100%;
     }
-    
+
     .filters{
         display: flex;
         gap: 10px;
@@ -2075,7 +2075,7 @@ input[type="search"].searchBar {
         justify-content: center;
         width: 100%;
     }
-    
+
     .filter-item select{
         font-size: 16px;
         border-radius: 0;
@@ -2084,7 +2084,7 @@ input[type="search"].searchBar {
         padding: 3px;
         text-align: center;
     }
-    
+
     .filters{
         display: flex;
         flex-direction: row;
@@ -2097,7 +2097,7 @@ input[type="search"].searchBar {
         align-items: center;
         margin: 0px;
     }
-    
+
     .filter-item p{
         border: none;
         border-radius: 5px;
@@ -2106,21 +2106,21 @@ input[type="search"].searchBar {
         padding: 0 10px;
         text-transform: uppercase;
     }
-    
+
     .mainindex{
         display: flex;
         width: 100%;
         justify-content: center;
     }
-    
+
     .search-item{
         display: flex;
         flex-direction: row;
         align-items: center;
         border: 2px solid #ccc;
-       
+
     }
-    
+
     .searchButton {
         background-image: url('/images/icon/search.png');
         background-size: contain;
@@ -2134,8 +2134,8 @@ input[type="search"].searchBar {
         border-radius: 4px;
         background-color: white;
     }
-    
-    
+
+
     .searchBar {
         font-size: 30px;
         border: none;
@@ -2143,12 +2143,12 @@ input[type="search"].searchBar {
         width: 400px;
         height: 100px;
     }
-    
+
     .searchBar:focus {
-        outline: none; 
-        border: none; 
+        outline: none;
+        border: none;
     }
-    
+
     input[type="search"].searchBar {
         margin: auto;
         text-align: left;
@@ -2156,10 +2156,10 @@ input[type="search"].searchBar {
         border-radius: 3px;
         border: none;
     }
-    
+
     .searchMessage{
-        font-size: xx-large; 
-          
+        font-size: xx-large;
+
     }
     .searchImg{
         height: 10px;
