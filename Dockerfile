@@ -42,6 +42,5 @@ RUN sed -i "s/80/\${PORT}/g" /etc/apache2/ports.conf /etc/apache2/sites-availabl
 RUN echo "<Directory /var/www/html/public/build>\n    Options FollowSymLinks\n    AllowOverride All\n    Require all granted\n</Directory>" \
     >> /etc/apache2/apache2.conf
 
-
 # Start Apache server
 CMD ["apache2-foreground"]
