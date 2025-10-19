@@ -14,16 +14,16 @@ class RecipeController extends Controller
     // Displays the homepage with featured, popular, and new recipes
     function index()
     {
-        $featuredRecipes = Recipe::inRandomOrder()->take(4)->get(['id', 'name', 'image']); 
-        
-        $popularRecipes = Recipe::withCount('users') 
-            ->orderBy('users_count', 'desc') 
-            ->take(5)
-            ->get(['id', 'name', 'image']); 
+        $featuredRecipes = Recipe::inRandomOrder()->take(4)->get(['id', 'name', 'image']);
 
-    
+        $popularRecipes = Recipe::withCount('users')
+            ->orderBy('users_count', 'desc')
+            ->take(5)
+            ->get(['id', 'name', 'image']);
+
+
         $newRecipes = Recipe::latest()->take(5)->get(['id', 'name', 'image']);
-        
+
         $categories = Category::all(['id', 'name']);
 
         return view('recipesbook.index', [
@@ -45,13 +45,13 @@ class RecipeController extends Controller
         $categoryCounts = Category::withCount('recipes')
         ->pluck('recipes_count', 'name')
         ->toArray();
-        
+
         $cuisineCounts = Cuisine::withCount('recipes')
             ->pluck('recipes_count', 'name')
             ->toArray();
 
-        return view('recipesbook/recipesList', 
-        ['recipes' => $recipes, 
+        return view('recipesbook/recipesList',
+        ['recipes' => $recipes,
         'categoryCounts' => $categoryCounts,
         'categories' => $categories,
         'cuisines' => $cuisines,
@@ -68,7 +68,7 @@ class RecipeController extends Controller
         return view('recipesbook.create', ['categories' => $categories, 'cuisines'=> $cuisines, 'macros' => $macros]);
     }
 
-    // About page 
+    // About page
     function about()
     {
         return view('recipesbook.about');
@@ -86,7 +86,7 @@ class RecipeController extends Controller
         else
         {
             $cuisine = $recipe->cuisine;
-            $category = $recipe->category; 
+            $category = $recipe->category;
             $macro = $recipe->macro;
 
             return view('recipesbook.show', [
@@ -95,7 +95,7 @@ class RecipeController extends Controller
                 'category' => $category,
                 'macro' => $macro,
             ]);
-        } 
+        }
     }
 
     // Displays the edit form for a specific recipe
@@ -108,9 +108,9 @@ class RecipeController extends Controller
 
         return view('recipesbook.edit', [
             'recipe' => $recipe,
-            'categories' => $categories, 
-            'cuisines'=> $cuisines, 
-            'macro' => $macro, 
+            'categories' => $categories,
+            'cuisines'=> $cuisines,
+            'macro' => $macro,
         ]);
     }
 
@@ -139,16 +139,16 @@ class RecipeController extends Controller
 
         $image = $request->image;
         $imageName = time() . '_' . $image->getClientOriginalName();
-        $image->move(public_path('images'), $imageName); 
-        $recipe->image = 'http://localhost/images/' . $imageName; 
-        
+        $image->move(public_path('images'), $imageName);
+        $recipe->image = asset('images/' . $imageName);
+
 
         $recipe->category_id = $request->category;
         $recipe->cuisine_id = $request->cuisine;
         $recipe->macro_id = $macro->id;
         $recipe->save();
- 
-        return redirect('/recipesbook')->with('success',"New Recipe, $recipe->name has been added!");        
+
+        return redirect('/recipesbook')->with('success',"New Recipe, $recipe->name has been added!");
     }
 
     // Updates a recipe's details
@@ -182,15 +182,15 @@ class RecipeController extends Controller
             $image = $request->file('image');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->move(public_path('images'), $imageName);
-            $recipe->image = 'http://localhost/images/' . $imageName;
+            $recipe->image = asset('images/' . $imageName);
         }
-        
+
         $recipe->category_id = $request->category;
         $recipe->cuisine_id = $request->cuisine;
         $recipe->macro_id = $macro->id;
         $recipe->save();
-    
-        return redirect('/recipesbook/recipesList')->with('success',"$recipe->name recipe has been updated!");        
+
+        return redirect('/recipesbook/recipesList')->with('success',"$recipe->name recipe has been updated!");
     }
 
     // Deletes a recipe along with its associated macro
@@ -200,7 +200,7 @@ class RecipeController extends Controller
         $macro = $recipe->macro;
         $recipe->delete();
         $macro->delete();
-    
+
         return redirect('/recipesbook/recipesList')->with('success', "$recipe->name recipe has been deleted!");
     }
 
@@ -351,7 +351,7 @@ class RecipeController extends Controller
         $saves = $user->savedRecipes;
         $categories = Category::all();
         $cuisines = Cuisine::all();
-        
+
         if (!$saves || $saves->isEmpty()) {
             return redirect()->back()->with('error', 'No saved recipes found.');
         }
@@ -376,12 +376,12 @@ class RecipeController extends Controller
     }
     public function saveUserRecipe($id)
     {
-        $user = Auth::user(); 
+        $user = Auth::user();
         if (!$user) {
             return response()->json(['error' => 'User not authenticated.'], 401);
         }
 
-        $recipe = Recipe::find($id); 
+        $recipe = Recipe::find($id);
         if (!$recipe) {
             return response()->json(['error' => 'Recipe not found in database.'], 404);
         }
@@ -392,7 +392,7 @@ class RecipeController extends Controller
             return response()->json(['success' => 'Recipe removed from saved']);
         }
 
-        $user->savedRecipes()->attach($id); 
+        $user->savedRecipes()->attach($id);
         return response()->json(['success' => 'Recipe saved!']);
     }
 
