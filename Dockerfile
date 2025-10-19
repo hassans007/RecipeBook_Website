@@ -38,6 +38,10 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 EXPOSE 10000
 ENV PORT=10000
 RUN sed -i "s/80/\${PORT}/g" /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf
+# Allow static files from /build
+RUN echo "<Directory /var/www/html/public/build>\n    Options FollowSymLinks\n    AllowOverride All\n    Require all granted\n</Directory>" \
+    >> /etc/apache2/apache2.conf
+
 
 # Start Apache server
 CMD ["apache2-foreground"]
