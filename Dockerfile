@@ -3,14 +3,7 @@ FROM php:8.2-apache
 
 # Install system dependencies and PHP extensions required by Laravel
 RUN apt-get update && apt-get install -y \
-    git \
-    unzip \
-    curl \
-    libpq-dev \
-    libzip-dev \
-    zip \
-    nodejs \
-    npm \
+    git unzip curl libpq-dev libzip-dev zip nodejs npm \
     && docker-php-ext-install pdo pdo_pgsql zip
 
 # Enable Apache mod_rewrite for Laravel routing
@@ -19,7 +12,7 @@ RUN a2enmod rewrite
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy composer from official image to avoid re-downloading
+# Copy composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 # Copy project files
@@ -28,22 +21,23 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# RUN php artisan optimize:clear
+# Install Node dependencies and build assets
+RUN npm install && npm run build
 
-# Install Node dependencies and build assets using Laravel + Vite Build
-RUN npm install
+# Ensure assets exist
+RUN ls -la public/build || echo "⚠️ public/build missing!"
 
-RUN npm run build
-
-# Set correct permissions for Laravel
+# Fix permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Set Apache DocumentRoot to the Laravel public folder
+# Set Apache DocumentRoot to Laravel public folder
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
 
-# Expose Render’s default port
+# Ensure Apache listens on Render’s expected port
 EXPOSE 10000
+ENV PORT=10000
+RUN sed -i "s/80/\${PORT}/g" /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf
 
 # Start Apache server
 CMD ["apache2-foreground"]
