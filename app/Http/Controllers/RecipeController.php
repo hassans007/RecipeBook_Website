@@ -50,7 +50,7 @@ class RecipeController extends Controller
             ->pluck('recipes_count', 'name')
             ->toArray();
 
-        return view('recipesbook/recipesList',
+        return view('recipesbook.recipeslist',
         ['recipes' => $recipes,
         'categoryCounts' => $categoryCounts,
         'categories' => $categories,
