@@ -183,6 +183,10 @@ body {
     border-radius: 20px;
 }
 
+.backimg-content h1{
+    font-size: xx-large;
+}
+
 .bottom-content{
     border-top: 2px solid #5caa35;
     display: flex;
@@ -1253,6 +1257,10 @@ input[type="search"].searchBar {
         color: #218838;
     }
 
+    .flip-card-front:hover .hover-text {
+        display: block;
+    }
+
     .hover-text {
         display: none;
         position: absolute;
@@ -1262,10 +1270,6 @@ input[type="search"].searchBar {
         background: rgba(0, 0, 0, 0.6);
         padding: 5px 10px;
         border-radius: 5px;
-    }
-
-    .flip-card-front:hover .hover-text {
-        display: block;
     }
 
     .btn {
@@ -1293,7 +1297,7 @@ input[type="search"].searchBar {
     }
 
     .recipe-item {
-        flex: 1 1 calc(25% - 20px);
+        flex: 1 1 calc(33.33% - 20px);
         max-width: 300px;
         position: relative;
     }
@@ -1332,10 +1336,11 @@ input[type="search"].searchBar {
         text-align: center;
         border-collapse: collapse;
         border-radius: 20px;
+        margin-top: 25px;
     }
 
     .backimg-content h1{
-        font-size: xxx-large;
+        font-size: xx-large;
     }
 
     .bottom-content{
@@ -1550,9 +1555,9 @@ input[type="search"].searchBar {
     }
 
     .recipelists-heading{
-        margin: 20px;
+        margin-top: 100px;
         text-align: center;
-        font-size: xxx-large;
+        font-size: xx-large;
         text-transform: uppercase;
     }
 
@@ -1567,17 +1572,17 @@ input[type="search"].searchBar {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
     }
 
     .recipelist-item{
-        flex: 1 1 calc(25% - 20px);
+        flex: 1 1 calc(33.33% - 20px);
         box-sizing: border-box;
     }
 
     .list-poster {
-        width: 300px;
-        height: 300px;
+        width: 270px;
+        height: 270px;
         border-radius: 20px;
         object-fit: cover;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1696,7 +1701,7 @@ input[type="search"].searchBar {
     }
 
     .form-container {
-        margin: 30px auto;
+        margin-top: 100px;
         padding: 20px;
         background: #f9f9f9;
         border-radius: 8px;
@@ -1725,19 +1730,29 @@ input[type="search"].searchBar {
         color: #333;
     }
 
-
+    .form-container textarea{
+        width: 500px;
+        height: 200px;
+        font-size: large;
+    }
 
     .form-container input[type="text"],
     input[type="number"],
     textarea,
     select {
-        width: 400px;
-        height: 100px;
+        width: auto;
+        height: auto;
         padding: 10px;
-        font-size: 30px;
+        font-size: 20px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
+    }
+    .form-group label{
+        font-size: 20px;
+    }
+    .form-group legend{
+        font-size: 30px;
     }
 
     input[type="file"]{
@@ -2036,12 +2051,12 @@ input[type="search"].searchBar {
         background-color: #4CAF50;
         color: #fff;
         border: none;
-        width: 180px;
-        height: 60px;
+        width: auto;
+        height: auto;
         padding: 10px 20px;
         margin: 5px;
         border-radius: 5px;
-        font-size: 40px;
+        font-size: 30px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
@@ -2065,7 +2080,9 @@ input[type="search"].searchBar {
     }
 
     .recplistmain-content{
-        width: 100%;
+        /* width: 100%; */
+        /* margin-right: 30px; */
+        margin-left: 20px;
     }
 
     .filters{
@@ -2118,7 +2135,6 @@ input[type="search"].searchBar {
         flex-direction: row;
         align-items: center;
         border: 2px solid #ccc;
-
     }
 
     .searchButton {
@@ -2141,7 +2157,7 @@ input[type="search"].searchBar {
         border: none;
         padding: 5px;
         width: 400px;
-        height: 100px;
+        height: auto;
     }
 
     .searchBar:focus {
@@ -2168,4 +2184,451 @@ input[type="search"].searchBar {
     .navbar-mobile{
         display: none;
     }
+
+/* ========================================
+   🌐 RESPONSIVE ENHANCEMENTS (Refined)
+   ======================================== */
+
+/* --- Medium Tablets / Small Laptops (max-width: 720px) --- */
+@media only screen and (max-width: 720px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 0 10px;
+    }
+
+    .listmain, .main-img {
+        gap: 15px;
+    }
+
+    .recipe-item, .recipelist-item {
+        width: 230px;
+        height: 230px;
+    }
+
+    .recipelist-item{
+        flex: 1 1 calc(33.33% - 20px);
+        box-sizing: border-box;
+    }
+
+    .list-poster {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        object-fit: cover;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .list-poster:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    .poster {
+        width: 100%;
+        height: auto;
+        max-height: 230px;
+    }
+
+    .recipe-name {
+        font-size: 1.1rem;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .searchBar {
+        width: 400px;
+        height: 50px;
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-container textarea{
+        width: 500px;
+        height: 200px;
+        font-size: large;
+    }
+
+    .form-container input[type="text"],
+    input[type="number"],
+    textarea,
+    select {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        font-size: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .form-group label{
+        font-size: 20px;
+    }
+    .form-group legend{
+        font-size: 30px;
+    }
+
+    .footer-nav {
+        gap: 25px;
+    }
+
+    button, input, select, textarea {
+        font-size: 1rem;
+    }
+    /* Flip card styles */
+    .flip-card-inner {
+        width: 100%;
+        /* height: auto; */
+        max-height: 230px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: auto; */
+        max-height: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .flip-card-front {
+        background: #f8f9fa;
+        border-radius: 15px;
+    }
+
+    .flip-card-back {
+        background: #e4e4e4a3;
+        transform: rotateY(180deg);
+        border-radius: 15px;
+    }
+
+    .flip-card-back a{
+        text-decoration: none;
+        color: #2c9abf;
+        font-size: 30px;
+    }
+
+    .flip-card-back h3{
+        font-size: 30px;
+    }
+
+    .flip-card-back a:hover{
+        text-decoration: underline;
+        color: #218838;
+    }
+
+    .flip-card-front:hover .hover-text {
+        display: block;
+    }
+}
+
+/* --- Large Mobile Devices (max-width: 600px) --- */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    .backimg-section {
+        height: 25vh;
+    }
+
+    .backimg-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .recipelists-heading {
+        font-size: 1.5rem;
+    }
+
+     .main-img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin: 10px auto;
+    }
+
+    .recipe-item {
+        flex: 1 1 100%;
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Flip card styles */
+    .flip-card-inner {
+        width: 100%;
+        /* height: auto; */
+        max-height: 230px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: auto; */
+        max-height: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .flip-card-front {
+        background: #f8f9fa;
+        border-radius: 15px;
+    }
+
+    .flip-card-back {
+        background: #e4e4e4a3;
+        transform: rotateY(180deg);
+        border-radius: 15px;
+    }
+
+    .flip-card-back a{
+        text-decoration: none;
+        color: #2c9abf;
+        font-size: 30px;
+    }
+
+    .flip-card-back h3{
+        font-size: 30px;
+    }
+
+    .flip-card-back a:hover{
+        text-decoration: underline;
+        color: #218838;
+    }
+
+    .flip-card-front:hover .hover-text {
+        display: block;
+    }
+
+    .poster {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .list-poster {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .filter-item select {
+        width: 160px;
+        padding: 6px;
+        font-size: 0.95rem;
+    }
+
+    .search-item {
+        width: 90%;
+    }
+
+    .searchBar {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    button.btn-submit,
+    button.main,
+    button.ls {
+        width: 100%;
+        font-size: 1.1rem;
+        height: 50px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+/* --- Small Mobile Devices (max-width: 480px) --- */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .content {
+        padding: 0 10px;
+    }
+
+    .header-mobile {
+        flex-direction: column;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .logo-mobile {
+        font-size: 1.4rem;
+    }
+
+    .flip-card {
+        width: 160px;
+        height: auto;
+    }
+
+    .poster, .list-poster {
+        width: 100%;
+        height: auto;
+    }
+
+    .recipe-name {
+        font-size: 1rem;
+    }
+
+    label, legend {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+        font-size: 1rem;
+        padding: 14px;
+        border-radius: 6px;
+    }
+
+    .form-container textarea {
+        min-height: 100px;
+    }
+
+    .btn, .btn-submit {
+        padding: 12px 18px;
+        font-size: 1rem;
+        height: auto;
+    }
+
+    .searchBar {
+        width: 95%;
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .backimg-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .footer-nav {
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Very Small Devices (max-width: 360px) --- */
+@media only screen and (max-width: 360px) {
+    body {
+        font-size: 0.85rem;
+    }
+
+    .flip-card, .list-poster, .poster {
+        width: 140px;
+        height: auto;
+    }
+
+    .recipe-name {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    button, input[type="submit"] {
+        font-size: 0.9rem;
+        padding: 10px;
+        height: auto;
+    }
+
+    .success-message {
+        width: 90%;
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .footer {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    .backimg-content h1 {
+        font-size: 1.1rem;
+    }
+}
+
+
 }

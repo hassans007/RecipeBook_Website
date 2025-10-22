@@ -1,25 +1,25 @@
-<x-layout title="Recipe Details">    
+<x-layout title="Recipe Details">
 
     <div class="show-container">
         <div class="recipe-content">
-            
+
             <img src="{{$recipe->image}}" alt="{{$recipe->name}} image" class="recipe-image">
-            
+
             <div class="recipe-details">
                 <h2>{{$recipe->name}}</h2>
-    
+
                 <div class="recipe-sub-details">
                     <span>Prep Time: {{$recipe->preparation_time}} mins</span>
                     <span>Cuisine: {{$cuisine->name}}</span>
                 </div>
 
                 <div class="ingredients-instructions">
-                
+
                     <div class="ingredients">
                         <h3>Ingredients</h3>
                         <p>{{$recipe->ingredients}}</p>
                     </div>
-    
+
                     <div class="instructions">
                         <h3>Instructions</h3>
                         <p>{{$recipe->instructions}}</p>
@@ -46,12 +46,12 @@
                             <form action="/recipesbook/{{ $recipe->id }}/saveUserRecipe" method="POST" class="save-form">
                                 @csrf
                                 @if ($recipe->isSavedByUser(auth()->user()))
-                                    <button type="submit" class="main save-button">Remove Recipe</button>
+                                    <button type="submit" class="main save-button sb">Remove Recipe</button>
                                 @else
-                                    <button type="submit" class="main save-button">Save Recipe</button>
+                                    <button type="submit" class="main save-button rb">Save Recipe</button>
                                 @endif
-                            </form>                                                                                      
-                        </div>             
+                            </form>
+                        </div>
                         @can('edit')
                             <div class="adminButton-container">
                                 <a href='/recipesbook/{{$recipe->id}}/edit'><button class="main">Edit</button></a>
@@ -59,14 +59,13 @@
                                     @csrf
                                     @method('DELETE')
                                     <input type="hidden" name="id" value="{{$recipe->id}}">
-                                    <button type="submit" class="main">Delete</button>
+                                    <button type="submit" class="main db">Delete</button>
                                 </form>
-                            </div> 
+                            </div>
                         @endcan
                     </div>
             </div>
         </div>
     </div>
-    
+
 </x-layout>
-    
