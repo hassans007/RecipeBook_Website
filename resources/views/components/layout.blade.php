@@ -42,7 +42,7 @@
         @guest
         <form method="GET" action="/recipesbook/login" class="nav-right">
             @csrf
-            <button type="submit" class="log">Log In</button>
+            <button type="submit" class="log">Login</button>
         </form>
         @endguest
     </nav>
